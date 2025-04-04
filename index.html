@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Copy Tài Khoản</title>
+</head>
+<body>
+  <h2>Click để copy tài khoản</h2>
+  <div>
+    <span id="acc1">email1@example.com:pass123</span>
+    <button onclick="copyToClipboard('acc1')">Copy</button>
+  </div>
+  <script>
+    function copyToClipboard(id) {
+      const text = document.getElementById(id).innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        alert("Đã copy: " + text);
+      });
+    }
+  </script>
+</body>
+</html>
